@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'ta.dart';
+import 'inicio.dart';
 
 class QuizPage extends StatefulWidget {
   @override
@@ -72,7 +73,10 @@ class _QuizPageState extends State<QuizPage> {
       _perguntaAtual = 0;
       _pontuacao = 0;
     });
-    Navigator.pop(context); // Retorna à página do quiz
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Inicio()),
+    );
   }
 
   @override
